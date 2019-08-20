@@ -30,7 +30,7 @@ class ShowMessagePolicy
     {
         $result = $this->membershipRepository->findMembershipForUser($user);
 
-        if ($result !== null) {
+        if ($result !== null && $message->getRecipient() === $user) {
             return true;
         }
 

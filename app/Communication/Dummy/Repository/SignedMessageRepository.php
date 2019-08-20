@@ -18,9 +18,11 @@ class SignedMessageRepository implements MessageRepository
     {
         $message = new SignedMessage();
         $message->setBody('Hello from Slovakia');
+        $message->setRecipient($user);
 
         $message2 = new SignedMessage();
         $message2->setBody('Hello from Germany');
+        $message2->setRecipient($user);
 
         $message3 = new SignedMessage();
         $message3->setBody('Hello from France');
